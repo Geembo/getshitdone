@@ -22,12 +22,12 @@ class Todo.Views.TasksIndex extends Backbone.View
     event.preventDefault()
     attributes = name: $('#new-task').val(),
     @collection.create attributes,
+      wait: true
       success: -> $('#add-task')[0].reset()
       error: @handleError
 
   handleError: (task, response)->
     if response.status == 422
-      console.log "error message"
       errors = $.parseJSON(response.responseText).errors
       for attribute, messages of errors
         alert "#{attribute} #{message}" for message in messages
