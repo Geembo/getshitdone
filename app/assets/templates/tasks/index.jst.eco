@@ -1,6 +1,6 @@
 <h1>Todos</h1>
-<ul>
-<% for task in @tasks.models: %>
-  <li><%= task.get('name') %></li>
-<% end %>
-</ul>
+<form id="add-task">
+  <input type="text" name="name" id="new-task">
+  <input type="submit" value="Add">
+</form>
+<ul id="tasks"></ul>
