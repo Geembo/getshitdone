@@ -20,5 +20,6 @@ class Todo.Views.TasksIndex extends Backbone.View
 
   createTask: (event) ->
     event.preventDefault()
-    @collection.create name: $('#new-task').val()
-    $('#add-task')[0].reset()
+    @collection.create name: $('#new-task').val(),
+      success: -> $('#add-task')[0].reset()
+      error: @handleError 
