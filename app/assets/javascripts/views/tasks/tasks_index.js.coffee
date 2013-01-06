@@ -7,6 +7,7 @@ class Todo.Views.TasksIndex extends Backbone.View
 
   initialize: ->
     @collection.on('reset', @render, @)
+    @collection.on('add', @appendTask, @)
 
   render: ->
     $(@el).html(@template())
@@ -20,3 +21,4 @@ class Todo.Views.TasksIndex extends Backbone.View
   createTask: (event) ->
     event.preventDefault()
     @collection.create name: $('#new-task').val()
+    $('#add-task')[0].reset()
