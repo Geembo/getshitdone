@@ -1,1 +1,1 @@
-<%= @task.get('name') %>
+<%= @task.get('name') %><button id="delete">Delete</button>
