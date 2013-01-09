@@ -5,9 +5,10 @@ class Todo.Views.Task extends Backbone.View
 
   events:
     'click #delete': 'remove'
+    'click span': 'edit'
 
   initialize: ->
-    @model.on('destroy', @render, @)
+    this.$el.attr( "id", "task" )
 
   render: ->
     $(@el).html(@template(task: @model))
@@ -15,3 +16,8 @@ class Todo.Views.Task extends Backbone.View
 
   remove: ->
     @model.destroy()
+
+  edit: (event) ->
+      $('').toggle()
+      $('#edit-task').toggle()
+      this.input.focus()

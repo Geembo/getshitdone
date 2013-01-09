@@ -6,7 +6,6 @@ class Todo.Views.TasksIndex extends Backbone.View
     'submit #add-task': 'createTask'
 
   initialize: ->
-    _.bindAk
     @collection.on('reset', @render, @)
     @collection.on('add', @appendTask, @)
     @collection.on('destroy', @render, @)
