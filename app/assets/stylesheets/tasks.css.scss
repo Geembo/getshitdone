@@ -13,10 +13,17 @@
       display: none;
       margin-left: -18px 
     }
+    i {
+      cursor: pointer;
+      margin-top: 5px;
+    }
     li {
-      padding-left: 35px;
+      cursor: move;
+      margin-left: 35px;
       list-style-type: none;
       line-height: 2.5em;
+      font-size: 18px;
+      border-bottom: 1px dotted #aaa;
     }
   }
   h2 {
@@ -30,6 +37,7 @@
         margin: 0;
         margin-left: 5px;
       }
+      min-height: 200px;
       padding: 5px;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
@@ -42,6 +50,7 @@
   }
   #delete {
     display: none;
+    float: right;
   }
   #new-task {
     margin: 0 auto;
@@ -49,8 +58,7 @@
     border: 0;
     font-size: 24px;
     height: 30px;
-    width: 450px;
-    text-align: center;
+    width: 350px;
     border-bottom: 1px solid #7e7e7e;
     border-radius: 0;
     box-shadow: none;
