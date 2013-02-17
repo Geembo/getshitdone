@@ -1,3 +1,5 @@
+![Get shit done](http://f.cl.ly/items/312R313g121Z3t0h2Y30/Screen%20Shot%202013-02-17%20at%209.39.50%20PM.png)
+
 Get Shit Done
 ===========
 ### Simple todo app with Ruby on Rails and Backbone.js
