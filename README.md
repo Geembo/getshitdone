@@ -2,9 +2,9 @@
 
 Get Shit Done
 ===========
-### Simple todo app with Ruby on Rails and Backbone.js
+### Dead stupid todo app with Ruby on Rails and Backbone.js
 
-Get shit done is a simple todo app developed using Ruby on Rails and Backbone.js. The main purpose is to showcase the process of developing with Backbone.js and make a proof of concept with the combination of both.
+Get shit done is a simple todo app developed using Ruby on Rails and Backbone.js. The main purpose is to have an easy way to organize my everyday workflow and my tasks in a dead stupid way, with three lists: in queue, doing, done. Also, it's very useful to showcase the process of developing with Backbone.js and Rails, and make a proof of concept with the combination of both.
 
 ### Run the app
 
@@ -20,7 +20,7 @@ Then, you need to start the Rails app.
 cd getshitdone
 rails s
 ```
-
+By default the project uses a basic sqlite3 databases but you can change the adapter according to your wish.
 If you are bored to get some data in there and you want to quickly see what's up with it, just run the following command.
 ```
 rake db:seed
