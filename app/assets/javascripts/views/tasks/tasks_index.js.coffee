@@ -21,10 +21,10 @@ class Todo.Views.TasksIndex extends Backbone.View
     $('#queue-tasks').append(view.render().el)
     $('.task').draggable
       helper: 'clone'
-    $('#doing-tasks').droppable
+    $('.doing').droppable
       drop: (event, ui)->
         element = $(ui.draggable).clone()
-        $(this).append(element)
+        $('#doing-tasks').append(element)
         $(ui.draggable).remove()
         console.log 'dropped'
 
