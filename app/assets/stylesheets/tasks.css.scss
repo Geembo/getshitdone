@@ -4,8 +4,23 @@
 @import "bootstrap";
 
 #container {
+  h1 {
+    margin: 30px 0;
+  }
   #delete {
     display: none;
+  }
+  #new-task {
+    margin: 0 auto;
+    display: block;
+    border: 0;
+    font-size: 24px;
+    height: 30px;
+    width: 450px;
+    text-align: center;
+    border-bottom: 1px solid #7e7e7e;
+    border-radius: 0;
+    box-shadow: none;
   }
   .task:hover > #delete {
     display: inline;
