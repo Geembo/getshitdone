@@ -1,4 +1,3 @@
 <span><%= @task.get('name') %></span>
 <input type="text" id="edit-task" style="display:none">
-<button id="update">Update</button>
-<button id="delete">Delete</button>
+<button class="btn" id="delete"><i class="icon-remove"></i></button>

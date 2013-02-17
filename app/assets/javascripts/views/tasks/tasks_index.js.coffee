@@ -18,7 +18,15 @@ class Todo.Views.TasksIndex extends Backbone.View
 
   appendTask: (task) ->
     view = new Todo.Views.Task(model: task)
-    $('#tasks').append(view.render().el)
+    $('#queue-tasks').append(view.render().el)
+    $('.task').draggable
+      helper: 'clone'
+    $('#doing-tasks').droppable
+      drop: (event, ui)->
+        element = $(ui.draggable).clone()
+        $(this).append(element)
+        $(ui.draggable).remove()
+        console.log 'dropped'
 
   createTask: (event) ->
     event.preventDefault()

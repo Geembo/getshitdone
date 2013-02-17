@@ -1,15 +1,15 @@
 class Todo.Views.Task extends Backbone.View
 
   template: JST['tasks/task']
+  modal: JST['tasks/modal']
   tagName: 'li'
 
   events:
     'click #delete': 'remove'
-    'click span': 'edit'
     'click #update': 'update'
 
   initialize: ->
-    this.$el.attr( "id", "task" )
+    this.$el.attr( "class", "task" )
 
   render: ->
     $(@el).html(@template(task: @model))

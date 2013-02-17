@@ -1,6 +1,20 @@
-<h1>Todos</h1>
+<nav class="main-menu">
+  <h1>Get <img src="http://code.kwint.in/emoji/img/d83ddca9.png" style="width: 48px; margin-top:-15px;" alt="Shit"> Done</h1>
+</nav>
 <form id="add-task">
-  <input type="text" name="name" id="new-task">
-  <input type="submit" value="Add">
+  <input type="text" name="name" id="new-task" placeholder="Add a new task, yo">
 </form>
-<ul id="tasks"></ul>
+<div class="row">
+  <div class="queue span3">
+    <h3>In Queue</h3>
+    <ul id="queue-tasks"></ul>
+  </div>
+  <div class="doing span3">
+    <h3>Doing</h3>
+    <ul id="doing-tasks"><li draggable="true">asdf</li><li>asd</li></ul>
+  </div>
+  <div class="done span3">
+    <h3>Done</h3>
+    <ul id="done-tasks"><li>asdf</li><li>asd</li></ul>
+  </div>
+</div>

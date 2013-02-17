@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require underscore
+//= require alertify.min
 //= require backbone
 //= require todo
 //= require_tree ../templates
