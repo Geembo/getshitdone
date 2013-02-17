@@ -29,6 +29,11 @@
   h2 {
     color: #DEAE23;
   }
+  #done-tasks {
+    span {
+      text-decoration: line-through;
+    }
+  }
   .row {
     width: 67%;
     margin: 0 auto;
