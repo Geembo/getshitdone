@@ -1,4 +1,6 @@
+<li class='task' data-cid="<%= @task.cid %>">
 <span id="move"><i class="icon-move"></i></span>
 <span><%= @task.get('name') %></span>
 <input type="text" id="edit-task" style="display:none">
 <span id="delete"><i class="icon-remove"></i></span>
+</li>

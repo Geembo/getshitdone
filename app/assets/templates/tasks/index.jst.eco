@@ -1,5 +1,5 @@
 <nav class="main-menu">
-  <h2>Get <img src="http://code.kwint.in/emoji/img/d83ddca9.png" style="width: 48px; margin-top:-15px;" alt="Shit"> Done</h2>
+  <h2>get <img src="http://code.kwint.in/emoji/img/d83ddca9.png" style="width: 48px; margin-top:-15px;" alt="Shit"> done</h2>
 </nav>
 <form id="add-task">
   <input type="text" name="name" id="new-task" placeholder="Add a new task, dawg">
@@ -11,10 +11,10 @@
   </div>
   <div class="doing span4">
     <h3>Doing</h3>
-    <ul id="doing-tasks"><li draggable="true">asdf</li><li>asd</li></ul>
+    <ul id="doing-tasks"></ul>
   </div>
   <div class="done span4">
     <h3>Done</h3>
-    <ul id="done-tasks"><li>asdf</li><li>asd</li></ul>
+    <ul id="done-tasks"></ul>
   </div>
 </div>
