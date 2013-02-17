@@ -2,7 +2,7 @@
   <h2>get <img src="http://code.kwint.in/emoji/img/d83ddca9.png" style="width: 48px; margin-top:-15px;" alt="Shit"> done</h2>
 </nav>
 <form id="add-task">
-  <input type="text" name="name" id="new-task" placeholder="Add a new task, dawg">
+  <input type="text" name="name" id="new-task" placeholder="add a new task, dawg!">
 </form>
 <div class="row">
   <div class="queue span4">
