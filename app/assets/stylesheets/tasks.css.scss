@@ -4,8 +4,27 @@
 @import "bootstrap";
 
 #container {
-  h1 {
+  ul {
+    margin-left: -20px;
+    span {
+      margin-left: 3px;
+    }
+    #move {
+      display: none;
+      margin-left: -18px 
+    }
+    li {
+      padding-left: 35px;
+      list-style-type: none;
+      line-height: 2.5em;
+    }
+  }
+  h2 {
     margin: 30px 0;
+  }
+  .row {
+    width: 67%;
+    margin: 0 auto;
   }
   #delete {
     display: none;
@@ -22,7 +41,7 @@
     border-radius: 0;
     box-shadow: none;
   }
-  .task:hover > #delete {
+  .task:hover > #delete, .task:hover > #move {
     display: inline;
   }
 }
