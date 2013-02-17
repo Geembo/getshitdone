@@ -22,15 +22,18 @@ class Todo.Views.TasksIndex extends Backbone.View
     $('.task').draggable
       helper: 'clone'
     $('.doing').droppable
+      hoverClass: "drop-hover"
       drop: (event, ui)->
+        task.save('status': 'doing')
         element = $(ui.draggable).clone()
         $('#doing-tasks').append(element)
         $(ui.draggable).remove()
-        console.log 'dropped'
 
   createTask: (event) ->
     event.preventDefault()
-    attributes = name: $('#new-task').val(),
+    attributes = 
+      name: $('#new-task').val()
+      status: 'queue'
     @collection.create attributes,
       wait: true
       success: -> $('#add-task')[0].reset()

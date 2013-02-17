@@ -1,4 +1,4 @@
 <span id="move"><i class="icon-move"></i></span>
 <span><%= @task.get('name') %></span>
 <input type="text" id="edit-task" style="display:none">
-<button class="btn" id="delete"><i class="icon-remove"></i></button>
+<span id="delete"><i class="icon-remove"></i></span>
