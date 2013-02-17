@@ -30,29 +30,30 @@ class Todo.Views.TasksIndex extends Backbone.View
     tasks = @collection
     $('.task').draggable
       helper: 'clone'
+      delay: 300
     $('.doing').droppable
       hoverClass: "drop-hover"
       drop: (event, ui)->
         task = tasks.get $(ui.draggable).data('cid')
-        task.save 'status': 'doing' unless task.get('status') is 'doing'
-        element = $(ui.draggable).clone()
+        if task.get('status') isnt 'doing'
+          task.save 'status': 'doing'
+          $(ui.draggable).remove()
 
     $('.done').droppable
       hoverClass: "drop-hover"
       drop: (event, ui)->
         task = tasks.get $(ui.draggable).data('cid')
-        task.save 'status': 'done' unless task.get('status') is 'done'
-        element = $(ui.draggable).clone()
-        $('#done-tasks').append(element)
-        $(ui.draggable).remove()
+        if task.get('status') isnt 'done'
+          task.save 'status': 'done' 
+          $(ui.draggable).remove()
 
     $('.queue').droppable
       hoverClass: "drop-hover"
       drop: (event, ui)->
         task = tasks.get $(ui.draggable).data('cid')
-        task.save 'status': 'queue' unless task.get('status') is 'queue'
-        element = $(ui.draggable).clone()
-        $(ui.draggable).remove()
+        if task.get('status') isnt 'queue'
+          task.save 'status': 'queue' 
+          $(ui.draggable).remove()
 
   createTask: (event) ->
     event.preventDefault()
