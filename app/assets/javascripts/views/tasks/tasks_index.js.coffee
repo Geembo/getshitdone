@@ -23,7 +23,7 @@ class Todo.Views.TasksIndex extends Backbone.View
       $('#queue-tasks').append(view.render().el)
     else if task.get('status') is 'doing'
       $('#doing-tasks').append(view.render().el)
-    else if task.get('done') is 'done'
+    else if task.get('status') is 'done'
       $('#done-tasks').append(view.render().el)
 
   drag: ->
