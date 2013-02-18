@@ -12,5 +12,5 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem 'bcrypt-ruby'
 gem 'backbone-on-rails'
