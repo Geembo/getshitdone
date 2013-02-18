@@ -1,8 +1,11 @@
 class User < ActiveRecord::Base
   has_secure_password
   
-  has_many :tasks
   attr_accessible :email, :password, :password_confirmation
-  
-  validates :email, uniqueness: { case_sensitive: false }, presence: true 
+
+  has_many :tasks
+
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i  
+  validates :email, uniqueness: { case_sensitive: false }, presence: true,
+                    format: { with: VALID_EMAIL_REGEX } 
 end
