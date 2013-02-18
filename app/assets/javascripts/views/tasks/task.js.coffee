@@ -12,7 +12,7 @@ class Todo.Views.Task extends Backbone.View
     @
 
   remove: ->
-    @model.destroy()
+  	@model.destroy() if confirm "Are you sure you want to delete #{@model.get('name')}"
 
   edit: (event) ->
       $('').toggle()
