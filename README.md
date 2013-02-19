@@ -10,7 +10,7 @@ Get shit done is a simple todo app developed using Ruby on Rails and Backbone.js
 
 First, you need to clone the git repository.
 ```
-git clone http://github.com/tsironis/getshitdone
+git clone https://github.com/Geembo/getshitdone.git
 ```
 or grab the ssh link above, if you use git with ssh.
 
