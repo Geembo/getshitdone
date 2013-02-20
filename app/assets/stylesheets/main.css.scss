@@ -10,3 +10,17 @@
   background: #433046;
   margin-bottom: 40px;
 }
+.user {
+  position: fixed;
+  bottom: 0;
+  background: #3A9CB7;
+  margin: 0;
+  width: 100%;
+  text-align:center;
+  padding: 10px;
+  a {
+    margin-left: 10px;
+    color: #725913;
+    text-decoration: underline;
+  }
+}
