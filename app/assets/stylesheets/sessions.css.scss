@@ -10,11 +10,10 @@
   padding-top: 40px;
   width: 50%;
 }
-
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  text-align: center;
+.registration {
+  h3 {
+    text-align: center;
+  }
 }
 .login-form {
   @include authentication-forms;
