@@ -6,7 +6,7 @@ Get Shit Done
 
 Get shit done is a simple todo app developed using Ruby on Rails and Backbone.js. The main purpose is to have an easy way to organize my everyday workflow and my tasks in a dead stupid way, with three lists: in queue, doing, done. Also, it's very useful to showcase the process of developing with Backbone.js and Rails, and make a proof of concept with the combination of both.
 
-### Run the app
+### Deploy
 
 First, you need to clone the git repository.
 ```
@@ -14,16 +14,30 @@ git clone https://github.com/Geembo/getshitdone.git
 ```
 or grab the ssh link above, if you use git with ssh.
 
-Then, you need to start the Rails app.
+Then, you need to need to folow this steps.
 
 ```
 cd getshitdone
-rails s
+rake db:setup
+rake assets:precompile
+unicorn_rails -E production -D 
 ```
-By default the project uses a basic sqlite3 databases but you can change the adapter according to your wish.
+By default, the project uses in development sqlite3 and in production postgresql.
+Feel free to change it according to your wishes.
 If you are bored to get some data in there and you want to quickly see what's up with it, just run the following command.
 ```
 rake db:seed
 ```
+
+### Contribute
+
+1. Fork the repo
+2. Do your mojo
+3. Open pull request
+4. Discuss
+
+### Demo
+
+You may find a demo version of this app @ http://geembogetshitdone.herokuapp.com
 
 That's all folks! Many updates will follow soon.
