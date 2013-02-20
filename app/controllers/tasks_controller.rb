@@ -1,8 +1,9 @@
 class TasksController < ApplicationController
   respond_to :json
-
+  before_filter :authorize
+  
   def index
-    respond_with Task.all
+    respond_with Task.where(user_id: current_user.id)
   end
   def show
     respond_with Task.find(params[:id])

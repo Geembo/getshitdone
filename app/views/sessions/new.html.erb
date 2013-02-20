@@ -1,15 +1,20 @@
 <div class="login">
   <h1>Login</h1>
 
-  <%= form_tag sessions_path do %>
-    <div class="field">
-            <%= label_tag :email %>
-            <%= text_field_tag :email, params[:email] %>
+  <div class="login-form">
+    <div class="span6 offset3">
+      <%= form_tag sessions_path do %>
+        <div class="field">
+                <%= label_tag :email %>
+                <%= text_field_tag :email, params[:email] %>
+        </div>
+        <div class="field">
+                <%= label_tag :password %>
+                <%= password_field_tag :password %>
+        </div>
+        <%= submit_tag "Login", class: "btn btn-success" %>
+      <% end %>
+      <p>Not a user yet? <%= link_to 'Register', register_path  %></p>
     </div>
-    <div class="field">
-            <%= label_tag :password %>
-            <%= password_field_tag :password %>
-    </div>
-    <%= submit_tag "Login", class: "btn btn-success" %>
-  <% end %>
+  </div>
 </div>

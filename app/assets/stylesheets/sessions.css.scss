@@ -1,4 +1,34 @@
-.login {
-  width: 10%;
-  margin: 0 auto;
+body {
+  padding-top: 20px;
 }
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+.login-form {
+  margin: 0 auto;
+  padding-top: 40px;
+  width: 50%;
+}
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
