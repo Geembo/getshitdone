@@ -1,20 +1,21 @@
+<nav class="main-menu">
+  <h2>get <img src="http://code.kwint.in/emoji/img/d83ddca9.png" style="width: 48px; margin-top:-15px;" alt="Shit"> done</h2>
+</nav>
 <div class="login">
-  <h1>Login</h1>
-
   <div class="login-form">
     <div class="span6 offset3">
       <%= form_tag sessions_path do %>
         <div class="field">
                 <%= label_tag :email %>
-                <%= text_field_tag :email, params[:email] %>
+                <%= text_field_tag :email, params[:email], :placeholder => "luke@skywalker.com" %>
         </div>
         <div class="field">
                 <%= label_tag :password %>
-                <%= password_field_tag :password %>
+                <%= password_field_tag :password  %>
         </div>
         <%= submit_tag "Login", class: "btn btn-success" %>
       <% end %>
-      <p>Not a user yet? <%= link_to 'Register', register_path  %></p>
+      <p>Don't you have an account? <%= link_to 'Register', register_path  %></p>
     </div>
   </div>
 </div>

@@ -1,5 +1,8 @@
+<nav class="main-menu">
+  <h2>get <img src="http://code.kwint.in/emoji/img/d83ddca9.png" style="width: 48px; margin-top:-15px;" alt="Shit"> done</h2>
+</nav>
 <div class="registration">
-  <h1>Register</h1>
+  <h3>Register</h3>
   <div class="register-form">
     <div class="span6 offset3">
       <%= form_for @user do |f| %>
@@ -21,10 +24,6 @@
         <div class="field">
           <%= f.label :password %>
           <%= f.password_field :password %>
-        </div>
-        <div class="field">
-          <%= f.label :password_confirmation %>
-          <%= f.password_field :password_confirmation %>
         </div>
         <div class="submit">
           <%= f.submit "Register", class: "btn btn-success" %>
