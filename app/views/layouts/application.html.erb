@@ -8,8 +8,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	
-<%= yield %>
 
+<%= yield %>
+<p>You are logged in as <%= current_user.email %><% link_to "Logout", logout_path, method: :delete %></p>
 </body>
 </html>

@@ -3,13 +3,15 @@ class TasksController < ApplicationController
   before_filter :authorize
   
   def index
-    respond_with Task.where(user_id: current_user.id)
+    respond_with Task.where(user_id: session[:user_id])
   end
   def show
     respond_with Task.find(params[:id])
   end
   def create
-    respond_with Task.create(params[:task])
+    task = Task.new(params[:task])
+    task.user_id = params[:user_id]
+    respond_with task
   end
   def update
     respond_with Task.update(params[:id], params[:task])
