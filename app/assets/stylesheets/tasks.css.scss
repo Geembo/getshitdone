@@ -32,6 +32,17 @@ h2 {
   h2 {
     color: #DEAE23;
   }
+  .powered {
+    margin-top: 15px;
+    color: #ccc;
+    font-size: 12px;
+    font-style: italic;
+    a {
+      color: #DEAE23;
+      text-decoration: underline;
+    }
+
+  }
   #done-tasks {
     span {
       text-decoration: line-through;
