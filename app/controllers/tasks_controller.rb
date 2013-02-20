@@ -11,7 +11,7 @@ class TasksController < ApplicationController
   def create
     task = Task.new(params[:task])
     task.user_id = params[:user_id]
-    respond_with task
+    respond_with task.save
   end
   def update
     respond_with Task.update(params[:id], params[:task])
