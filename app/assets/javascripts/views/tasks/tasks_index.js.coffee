@@ -25,12 +25,12 @@ class Todo.Views.TasksIndex extends Backbone.View
       $('#doing-tasks').append(view.render().el)
     else if task.get('status') is 'done'
       $('#done-tasks').append(view.render().el)
+    $('.task').disableSelection()
 
   drag: ->
     tasks = @collection
     $('.task').draggable
       helper: 'clone'
-      delay: 300
     $('.doing').droppable
       hoverClass: "drop-hover"
       drop: (event, ui)->
