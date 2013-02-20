@@ -8,6 +8,12 @@ body {
   box-sizing: border-box;
 }
 
+@mixin authentication-forms {
+  margin: 0 auto;
+  padding-top: 40px;
+  width: 50%;
+}
+
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
@@ -15,9 +21,11 @@ h1 {
 }
 
 .login-form {
-  margin: 0 auto;
-  padding-top: 40px;
-  width: 50%;
+  @include authentication-forms;
+}
+
+.register-form {
+  @include authentication-forms;
 }
 
 input, textarea, select, .uneditable-input {
