@@ -29,6 +29,13 @@ If you are bored to get some data in there and you want to quickly see what's up
 rake db:seed
 ```
 
+### Contribute
+
+1. Fork the repo
+2. Do your mojo
+3. Open pull request
+4. Discuss
+
 ### Demo
 
 You may find a demo version of this app @ http://geembogetshitdone.herokuapp.com
