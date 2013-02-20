@@ -9,9 +9,9 @@ class TasksController < ApplicationController
     respond_with Task.find(params[:id])
   end
   def create
-    task = Task.new(params[:task])
-    task.user_id = params[:user_id]
-    respond_with task.save
+    respond_with Task.create(name: params[:task][:name], 
+                           status: params[:task][:status],
+                           user_id: params[:user_id])
   end
   def update
     respond_with Task.update(params[:id], params[:task])
