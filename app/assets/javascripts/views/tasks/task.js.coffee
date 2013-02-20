@@ -1,5 +1,5 @@
 class Todo.Views.Task extends Backbone.View
-
+  tagName: 'li'
   template: JST['tasks/task']
   modal: JST['tasks/modal']
 
@@ -8,7 +8,9 @@ class Todo.Views.Task extends Backbone.View
     'click #update': 'update'
 
   render: ->
+    $(@el).addClass('task')
     $(@el).html(@template(task: @model))
+    $(@el).attr 'data-cid', @model.cid
     @
 
   remove: ->
