@@ -1,8 +1,10 @@
 Todo::Application.routes.draw do
-  
+
+  root to: 'main#index'
+    
   get    'register',  to: 'users#new',          as: 'register'
   get    'login',     to: 'sessions#new',       as: 'login'
-  delete 'logout',    to: 'sessions#destroy',   as: 'logout'
+  get 'logout',    to: 'sessions#destroy',   as: 'logout'
   
   resources :sessions
   resources :users
@@ -11,5 +13,4 @@ Todo::Application.routes.draw do
     resources :tasks
   end
 
-  root to: 'main#index'
 end
