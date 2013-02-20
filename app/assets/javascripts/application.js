@@ -15,6 +15,7 @@
 //= require underscore
 //= require alertify.min
 //= require backbone
+//= require jquery.showpassword.min
 //= require todo
 //= require_tree ../templates
 //= require_tree ./models
