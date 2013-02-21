@@ -9,12 +9,10 @@ describe Task do
 
   it { should respond_to(:name) }
   it { should respond_to(:status) }
+  it { should belong_to(:user) }
+  it { should validate_presence_of(:name) }
 
   it { should be_valid }
 
-  describe "when name is not present" do
-    before { @task.name = " " }
-    it { should_not be_valid }
-  end
 
 end
