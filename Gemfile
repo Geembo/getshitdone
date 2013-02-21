@@ -5,6 +5,10 @@ gem 'rails', '3.2.11'
 group :development, :test do
   gem 'sqlite3' 
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers', '>= 1.4.2'  
 end
 
 group :production do
@@ -13,8 +17,8 @@ group :production do
 end
 
 group :test do
-  gem 'capybara'
-  gem 'factory_girl_rails'
+  gem 'spork'
+  gem 'guard-spork'
 end
 
 group :assets do
