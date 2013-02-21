@@ -40,4 +40,12 @@ rake db:seed
 
 You may find a demo version of this app @ http://geembogetshitdone.herokuapp.com
 
+You can login with these credentials
+```
+email: demo@geembo.com
+password: password
+```
+
+or register for your own account
+
 That's all folks! Many updates will follow soon.
